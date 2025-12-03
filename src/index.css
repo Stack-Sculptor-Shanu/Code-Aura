@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/*! Navbar starts here */
+.navbar {
+  height: 70px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 2px 2px 10px gainsboro;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: red; */
+}
+.logo {
+  width: 20%;
+  font-family: "Science Gothic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "wdth" 100, "CTRS" 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+  gap: 5px;
+}
+
+.logo-animation {
+  height: 50px;
+  width: 50px;
+}
+
+.navlist {
+  height: 100%;
+  width: 50%;
+}
+
+.navlist > ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style-type: none;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* .navlist li:last-child {
+  padding: 10px 20px;
+  margin: 0 15px;
+  border: 2px solid #8eebac;
+  background-color: #8eebac;
+  border-radius: 7px;
+  box-shadow: 2px 2px 4px #d8d3d3;
+} */
+
+a {
+  text-decoration: none;
+  color: #121212;
+  font-weight: 700;
+}
+
+.navlist li:not(:last-child) {
+  position: relative;
+}
+
+.navlist li:not(:last-child):hover {
+  transform: translateY(-3px);
+  transition: 1s all;
+}
+.navlist li:not(:last-child) > a:hover {
+  cursor: pointer;
+
+  transition: 0.5s;
+  color: #026421;
+}
+
+.navlist li:not(:last-child) > a:focus::after {
+  content: ".";
+  position: absolute;
+  color: #444;
+  font-size: 30px;
+  line-height: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navlist li:not(:last-child) > a:focus {
+  color: #026421;
+}
+/* .navlist li:last-child:hover {
+  background-color: transparent;
+} */
+
+.navlist li:last-child {
+  padding: 10px 20px;
+  margin: 0 15px;
+  border: 2px solid #8eebac;
+  border-radius: 7px;
+  box-shadow: 2px 2px 4px #d8d3d3;
+  background-color: #8eebac;
+
+  /* Animation background */
+  background-image: linear-gradient(#026421, #026421); /* Hover color */
+  background-repeat: no-repeat;
+  background-position: bottom; /* Start from bottom */
+  background-size: 100% 0%; /* Start with height = 0 */
+
+  transition: background-size 0.4s ease;
+}
+
+.navlist li:last-child:hover {
+  background-size: 100% 100%; /* Fill upward */
+}
+
+.navlist li:last-child a {
+  text-decoration: none;
+  color: #121212;
+  position: relative; /* always stays above background */
+  z-index: 2;
+}
+
+.navlist li:last-child:hover a {
+  color: white;
+}
