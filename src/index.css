@@ -106,24 +106,21 @@ a {
   border-radius: 7px;
   box-shadow: 2px 2px 4px #d8d3d3;
   background-color: #8eebac;
-
-  /* Animation background */
-  background-image: linear-gradient(#026421, #026421); /* Hover color */
+  background-image: linear-gradient(#026421, #026421);
   background-repeat: no-repeat;
-  background-position: bottom; /* Start from bottom */
-  background-size: 100% 0%; /* Start with height = 0 */
-
+  background-position: bottom;
+  background-size: 100% 0%;
   transition: background-size 0.4s ease;
 }
 
 .navlist li:last-child:hover {
-  background-size: 100% 100%; /* Fill upward */
+  background-size: 100% 100%;
 }
 
 .navlist li:last-child a {
   text-decoration: none;
   color: #121212;
-  position: relative; /* always stays above background */
+  position: relative;
   z-index: 2;
 }
 
