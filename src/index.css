@@ -52,15 +52,6 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* .navlist li:last-child {
-  padding: 10px 20px;
-  margin: 0 15px;
-  border: 2px solid #8eebac;
-  background-color: #8eebac;
-  border-radius: 7px;
-  box-shadow: 2px 2px 4px #d8d3d3;
-} */
-
 a {
   text-decoration: none;
   color: #121212;
@@ -95,9 +86,6 @@ a {
 .navlist li:not(:last-child) > a:focus {
   color: #026421;
 }
-/* .navlist li:last-child:hover {
-  background-color: transparent;
-} */
 
 .navlist li:last-child {
   padding: 10px 20px;
