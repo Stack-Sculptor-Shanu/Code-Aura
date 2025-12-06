@@ -17,41 +17,44 @@ const LoginPage = () => {
   console.log(errors);
   return (
     <div className="formContainer">
-      <form className="loginForm" onSubmit={handleSubmit}>
-        <h1>Good To See You Again!</h1>
-        <Inputs
-          label={"Username"}
-          id={"userName"}
-          name={"userName"}
-          value={values.userName}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          error={errors.userName}
-          touched={touched.userName}
-        />
+      <div className="info"></div>
+      <div className="form">
+        <form className="loginForm" onSubmit={handleSubmit}>
+          <h1>Good To See You Again!</h1>
+          <Inputs
+            label={"Username"}
+            id={"userName"}
+            name={"userName"}
+            value={values.userName}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            error={errors.userName}
+            touched={touched.userName}
+          />
 
-        <Inputs
-          label={"Password"}
-          id={"password"}
-          type="password"
-          name={"password"}
-          value={values.password}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          error={errors.password}
-          touched={touched.password}
-        />
+          <Inputs
+            label={"Password"}
+            id={"password"}
+            type="password"
+            name={"password"}
+            value={values.password}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            error={errors.password}
+            touched={touched.password}
+          />
 
-        <button type="submit">Submit</button>
+          <button type="submit">Log In</button>
 
-        <span>
-          Need help? <Link>Reset password</Link>
-        </span>
+          <span>
+            Need help? <Link>Reset password</Link>
+          </span>
 
-        <span>
-          Not registered yet? <Link to={"/register"}>Sign up now</Link>
-        </span>
-      </form>
+          <span>
+            Not registered yet? <Link to={"/register"}>Sign up now</Link>
+          </span>
+        </form>
+      </div>
     </div>
   );
 };

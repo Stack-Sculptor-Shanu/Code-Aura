@@ -119,47 +119,117 @@ a {
 
 /*! Login Form Starts here  */
 .formContainer {
-  height: 500px;
-  width: 450px;
-  border: 2px solid red;
-}
-
-.loginForm {
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  background-color: lightpink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.formContainer > .info {
+  height: 200%;
+  width: 100%;
+  position: relative;
+  left: -370px;
+  top: 0;
+  background: linear-gradient(
+    135deg,
+    #0f0f0f 0%,
+    #1f5f32 25%,
+    #2f9a54 50%,
+    #b7f8d2 75%,
+    #0f0f0f 100%
+  );
+  transform: rotate(20deg);
 }
 
-.loginForm > h1 {
-  text-align: center;
-  margin: 50px 0;
+.formContainer > .form {
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: -200px;
 }
-
 .loginForm {
+  height: 400px;
+  width: 420px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 20px;
+  border: 2px solid #8eebac;
 }
 
-.loginForm > .form-control,
-button {
+.loginForm h1 {
+  margin: 30px;
+  color: #1f5f32;
+}
+
+.form-control {
+  position: relative;
   width: 85%;
-  display: flex;
-  flex-direction: column;
+  margin: 10px;
 }
 
-.form-control > input {
-  padding: 10px;
+.form-control input {
+  padding: 14px;
+  border-radius: 4px;
+  outline: none;
+  border: 2px solid #026421;
+  background-color: transparent;
+  font-size: 14px;
+  width: 100%;
+  color: #026421;
 }
 
-.form-control > label {
+.form-control label {
   position: absolute;
-  padding: 10px;
+  top: 15px;
+  left: 12px;
+  color: #026421;
+  pointer-events: none;
+  transition: 0.3s ease;
+  font-size: 14px;
+  font-weight: 600;
+}
+.form-control:focus-within label {
+  top: 5px;
+  left: 12px;
+  padding: 0 4px;
+  font-size: 10px;
 }
 
-.form-control > input:focus + label,
+.form-control input:focus + label,
 .form-control input:not(:placeholder-shown) + label {
-  top: -10px;
+  top: 3px;
+  left: 10px;
+  padding: 0 4px;
+  font-size: 12px;
+}
+
+.loginForm button {
+  width: 85%;
+  padding: 10px;
+  border: 2px solid #026421;
+  border-radius: 6px;
+  outline: none;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.6s;
+  margin: 10px;
+  color: #fff;
+  background-color: #026421;
+}
+
+.loginForm button:hover {
+  transform: translateY(-5px);
+  background-color: #b4f1c798;
+  color: #026421;
+}
+
+.loginForm .form-error {
+  color: red;
 }

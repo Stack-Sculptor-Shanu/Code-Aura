@@ -13,7 +13,6 @@ const Inputs = ({
 }) => {
   return (
     <div className="form-control">
-      <label htmlFor={id}>{label}</label>
       <input
         type={type}
         id={id}
@@ -22,7 +21,9 @@ const Inputs = ({
         onChange={onChange}
         onBlur={onBlur}
         autoComplete="off"
+        placeholder=" "
       />
+      <label htmlFor={id}>{label}</label>
       {error && touched && <p className="form-error">{error}</p>}
     </div>
   );
