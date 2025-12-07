@@ -23,7 +23,7 @@ const NavLists = () => {
           <Link to={"/contact"}>Contact</Link>
         </li>
         <li>
-          <Link to={"/login"}>Login/Signup</Link>
+          <Link to={"/auth"}>Login/Signup</Link>
         </li>
       </ul>
     </div>

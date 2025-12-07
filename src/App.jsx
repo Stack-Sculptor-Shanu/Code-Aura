@@ -9,6 +9,7 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import LoginPage from "./components/Auth/LoginPage";
 import RegisterPage from "./components/Auth/RegisterPage";
+import AuthPage from "./components/Auth/AuthPage";
 
 const App = () => {
   const routes = createBrowserRouter([
@@ -43,12 +44,8 @@ const App = () => {
       ],
     },
     {
-      path: "/login",
-      element: <LoginPage />,
-    },
-    {
-      path: "/register",
-      element: <RegisterPage />,
+      path: "auth",
+      element: <AuthPage />,
     },
   ]);
   return <RouterProvider router={routes}></RouterProvider>;
